@@ -1,0 +1,20 @@
+{
+  "name": "pangolin-components",
+  "version": "0.0.1",
+  "description": "A collection of accessible react components built using styled-components and storybook.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Johannes van der Merwe",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.2.12",
+    "@types/styled-components": "^5.1.26",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.10",
+    "tslib": "^2.5.3",
+    "typescript": "^5.1.3"
+  }
+}
