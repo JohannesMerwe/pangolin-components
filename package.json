@@ -14,7 +14,8 @@
         "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
         "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
         "storybook": "storybook dev -p 6006",
-        "build-storybook": "storybook build"
+        "build-storybook": "storybook build",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Johannes van der Merwe (JohannesMerwe)",
     "license": "MIT",
