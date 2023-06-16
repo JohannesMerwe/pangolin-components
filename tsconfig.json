@@ -1,6 +1,6 @@
 {
-    "include": ["src", "src/components/Accordion/index.test.tsx"],
-    "exclude": ["dist", "node_modules"],
+    "include": ["src"],
+    "exclude": ["dist", "src/stories", "node_modules"],
     "compilerOptions": {
         "module": "esnext",
         "lib": ["dom", "esnext"],
