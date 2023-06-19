@@ -12,14 +12,15 @@ export interface AccordionProps {
 }
 
 const AccordionContainer = styled.div`
-    font-family: Arial, sans-serif;
+    font-family: ${props =>
+        props.theme.typography.type.primary || "Arial, sans-serif"};
     border-radius: 15px;
     overflow: hidden;
 `;
 
 const AccordionButton = styled.button<{ active: boolean }>`
-    color: #fff;
-    background-color: #e53935;
+    color: ${props => props.theme.colors.text || "#fff"};
+    background-color: ${props => props.theme.colors.primary || "#e53935"};
     border: none;
     padding: 12px;
     font-size: 16px;
@@ -29,13 +30,15 @@ const AccordionButton = styled.button<{ active: boolean }>`
     transition: background-color 0.3s;
 
     &:hover {
-        background-color: #e53935;
+        background-color: ${props =>
+            props.theme.colors.background || "#e53935"};
     }
 
     ${props =>
         props.active &&
         css`
-            background-color: #e53935;
+            background-color: ${props =>
+                props.theme.colors.secondary || "#e53935"};
         `}
 `;
 
@@ -60,7 +63,7 @@ const AccordionIcon = styled.span<{ active: boolean }>`
 `;
 
 const AccordionSection = styled.section<{ active: boolean }>`
-    background-color: #fafafa;
+    background-color: ${props => props.theme.colors.background || "#fafafa"};
     padding: 12px;
     transition: max-height 0.3s;
 
