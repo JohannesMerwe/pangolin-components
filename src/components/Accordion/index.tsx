@@ -19,7 +19,7 @@ const AccordionContainer = styled.div`
 
 const AccordionButton = styled.button<{ active: boolean }>`
     color: #fff;
-    background-color: #a61208;
+    background-color: #e53935;
     border: none;
     padding: 12px;
     font-size: 16px;
@@ -29,13 +29,13 @@ const AccordionButton = styled.button<{ active: boolean }>`
     transition: background-color 0.3s;
 
     &:hover {
-        background-color: #a61208;
+        background-color: #e53935;
     }
 
     ${props =>
         props.active &&
         css`
-            background-color: #a61208;
+            background-color: #e53935;
         `}
 `;
 

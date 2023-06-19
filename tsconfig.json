@@ -1,6 +1,6 @@
 {
     "include": ["src"],
-    "exclude": ["dist", "src/stories", "node_modules"],
+    "exclude": ["dist", "src/stories", "node_modules", "src/**/*.test.tsx"],
     "compilerOptions": {
         "module": "esnext",
         "lib": ["dom", "esnext"],
