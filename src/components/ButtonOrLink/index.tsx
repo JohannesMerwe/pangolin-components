@@ -5,6 +5,7 @@ type ButtonOrLinkProps = {
     to?: string;
     primary?: boolean;
     secondary?: boolean;
+    tertiary?: boolean;
     large?: boolean;
     onClick?: () => void;
     children: string;
@@ -13,14 +14,14 @@ type ButtonOrLinkProps = {
 const StyledButton = styled.button<ButtonOrLinkProps>`
     ${({ theme, primary, secondary, large }) => css`
         display: inline-block;
-        padding: ${theme.spacing.padding.medium}px;
-        border-radius: ${theme.spacing.borderRadius.default}px;
+        padding: ${theme.spacing.padding.small}px;
+        border-radius: ${theme.spacing.borderRadius.medium}px;
         font-family: ${theme.typography.type.primary};
         font-weight: ${theme.typography.weight.bold};
         font-size: ${large
             ? theme.typography.size.m1
             : theme.typography.size.s3}px;
-        color: ${theme.colors.text};
+        color: ${theme.colors.textInverse};
         background-color: ${primary
             ? theme.colors.primary
             : secondary

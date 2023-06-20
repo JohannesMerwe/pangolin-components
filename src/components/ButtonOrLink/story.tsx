@@ -22,6 +22,13 @@ export const Secondary: Story = {
     },
 };
 
+export const Tertiary: Story = {
+    args: {
+        children: "Tertiary Button",
+        tertiary: true,
+    },
+};
+
 export const Large: Story = {
     args: {
         children: "Large Button",

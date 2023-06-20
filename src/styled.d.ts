@@ -11,6 +11,7 @@ declare module "styled-components" {
             secondary: string;
             tertiary: string;
             text: string;
+            textInverse: string;
         };
         spacing: {
             padding: {
@@ -20,6 +21,9 @@ declare module "styled-components" {
             };
             borderRadius: {
                 small: number;
+                small: number;
+                medium: number;
+                large: number;
                 default: number;
             };
         };

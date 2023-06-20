@@ -11,6 +11,7 @@ const defaultTheme: DefaultTheme = {
         secondary: "#756F86",
         tertiary: "#DDDDDD",
         text: "#222222",
+        textInverse: "#F6F9FC",
     },
     spacing: {
         padding: {
@@ -19,7 +20,9 @@ const defaultTheme: DefaultTheme = {
             large: 30,
         },
         borderRadius: {
-            small: 5,
+            small: 10,
+            medium: 25,
+            large: 40,
             default: 10,
         },
     },
@@ -60,6 +63,7 @@ const lightTheme: DefaultTheme = {
         secondary: "#756F86",
         tertiary: "#DDDDDD",
         text: "#222222",
+        textInverse: "#F6F9FC",
     },
 };
 
@@ -74,6 +78,7 @@ const darkTheme: DefaultTheme = {
         secondary: "#756F86",
         tertiary: "#DDDDDD",
         text: "#F6F9FC",
+        textInverse: "#F6F9FC",
     },
 };
 
