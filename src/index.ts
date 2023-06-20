@@ -1,3 +1,3 @@
-import Accordion from "./components/Accordion";
+import ButtonOrLink from "./components/ButtonOrLink";
 
-export { Accordion };
+export { ButtonOrLink };
