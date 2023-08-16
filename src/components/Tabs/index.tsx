@@ -43,17 +43,30 @@ const TabsListButton = styled.button<TabsListButtonProps>`
     `}
 `;
 
+const TabPanel = styled.div`
+    ${({ theme }) => css`
+        text-align: left;
+        border: 1px solid ${theme.colors.positive};
+        border-radius: ${theme.spacing.borderRadius.small}px;
+        padding: ${theme.spacing.padding.small}px;
+    `}
+`;
+
 const Tabs: React.FC<TabsProps> = ({ defaultValue, items }) => {
     const [value, setValue] = useState(defaultValue ?? items[0].value);
 
     return (
         <TabsWrapper>
-            <TabsList>
+            <TabsList role="tablist">
                 {items.map(({ label, value: itemValue }) => (
                     <TabsListButton
                         key={itemValue}
                         type="button"
+                        role="tab"
+                        id={`tab-${itemValue}`}
+                        aria-controls={`tabpanel-${itemValue}`}
                         isActive={itemValue === value}
+                        aria-selected={itemValue === value}
                         onClick={() => {
                             setValue(itemValue);
                         }}
@@ -62,13 +75,17 @@ const Tabs: React.FC<TabsProps> = ({ defaultValue, items }) => {
                     </TabsListButton>
                 ))}
             </TabsList>
-            <div>
-                {items.map(({ panel, value: itemValue }) => (
-                    <div key={itemValue} hidden={itemValue !== value}>
-                        {panel}
-                    </div>
-                ))}
-            </div>
+            {items.map(({ panel, value: itemValue }) => (
+                <TabPanel
+                    key={itemValue}
+                    hidden={itemValue !== value}
+                    role="tabpanel"
+                    id={`tabpanel-${itemValue}`}
+                    aria-labelledby={`tab-${itemValue}`}
+                >
+                    {panel}
+                </TabPanel>
+            ))}
         </TabsWrapper>
     );
 };
