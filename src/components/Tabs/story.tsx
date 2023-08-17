@@ -8,7 +8,7 @@ const meta: Meta = {
     component: Tabs,
 };
 
-export const DefaultTabs: Story = {
+export const Default: Story = {
     args: {
         defaultValue: 1,
         items: [
