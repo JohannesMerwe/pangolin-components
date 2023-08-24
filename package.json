@@ -1,6 +1,6 @@
 {
     "name": "pangolin-components",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A collection of accessible react components built using styled-components and storybook.",
     "main": "./dist/cjs/index.js",
     "module": "./dist/esm/index.js",
